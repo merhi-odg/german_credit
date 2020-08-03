@@ -1,0 +1,90 @@
+{
+   "type": "record",
+   "name": "german_credit_schema_in",
+   "fields": [
+      {
+         "name": "label",
+         "type": "int"
+      },
+      {
+         "name": "number_people_liable",
+         "type": "int"
+      },
+      {
+         "name": "credit_amount",
+         "type": "int"
+      },
+      {
+         "name": "property",
+         "type": "string"
+      },
+      {
+         "name": "present_employment_since",
+         "type": "string"
+      },
+      {
+         "name": "duration_months",
+         "type": "int"
+      },
+      {
+         "name": "credit_history",
+         "type": "string"
+      },
+      {
+         "name": "status_sex",
+         "type": "string"
+      },
+      {
+         "name": "savings_account",
+         "type": "string"
+      },
+      {
+         "name": "age_years",
+         "type": "int"
+      },
+      {
+         "name": "purpose",
+         "type": "string"
+      },
+      {
+         "name": "telephone",
+         "type": "string"
+      },
+      {
+         "name": "installment_rate",
+         "type": "int"
+      },
+      {
+         "name": "checking_status",
+         "type": "string"
+      },
+      {
+         "name": "job",
+         "type": "string"
+      },
+      {
+         "name": "installment_plans",
+         "type": "string"
+      },
+      {
+         "name": "debtors_guarantors",
+         "type": "string"
+      },
+      {
+         "name": "housing",
+         "type": "string"
+      },
+      {
+         "name": "number_existing_credits",
+         "type": "int"
+      },
+      {
+         "name": "foreign_worker",
+         "type": "string"
+      },
+      {
+         "name": "present_residence_since",
+         "type": "int"
+      }
+   ]
+}
