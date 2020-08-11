@@ -1,4 +1,4 @@
-# fastscore.schema.0: german_credit_schema_in
+# fastscore.schema.0: input_schema
 # fastscore.slot.1: in-use
 
 import pandas as pd
