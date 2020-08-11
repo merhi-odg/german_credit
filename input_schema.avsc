@@ -1,6 +1,6 @@
 {
    "type": "record",
-   "name": "german_credit_schema_in",
+   "name": "input_schema",
    "fields": [
       {
          "name": "label",
