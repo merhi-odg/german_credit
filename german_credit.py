@@ -1,15 +1,15 @@
-# fastscore.schema.0: input_schema.avsc
-# fastscore.slot.1: in-use
+# modelop.schema.0: input_schema.avsc
+# modelop.slot.1: in-use
 
 import pandas as pd
 import pickle
 import numpy as np
-#import math
 
 # Bias libraries
 from aequitas.preprocessing import preprocess_input_df
 from aequitas.group import Group
 from aequitas.bias import Bias 
+
 
 # modelop.init
 def begin():
@@ -41,6 +41,7 @@ def begin():
         'housing_A153', 'job_A171', 'job_A172', 'job_A173', 'job_A174',
         'telephone_A191', 'telephone_A192', 'foreign_worker_A201',
         'foreign_worker_A202', 'gender_female', 'gender_male']
+
 
 # modelop.score
 def action(data):
@@ -95,6 +96,7 @@ def action(data):
     data["predicted_score"] = logReg_model.predict(encoded_features)
     
     yield data.to_dict(orient="records")
+
 
 # modelop.metrics
 def metrics(scored_labeled_data):
