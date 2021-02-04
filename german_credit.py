@@ -1,5 +1,5 @@
 # modelop.schema.0: input_schema.avsc
-# modelop.slot.1: in-use
+# modelop.schema.1: output_schema.avsc
 
 import pandas as pd
 import pickle
@@ -51,7 +51,6 @@ def action(data):
     
     # remove ground truth if present
     if "label" in data.columns:
-        print("True")
         data = data.drop(["label"], axis=1)
     
     # engineer gender from status_sex
@@ -64,7 +63,7 @@ def action(data):
     # drop status_sex from features
     data = data.drop(["status_sex"], axis=1)
     
-    print(data.shape)
+    # print(data.shape, flush=True)
 
     # All categorical vars to be encoded
     categorical_columns = [
@@ -76,18 +75,18 @@ def action(data):
     # encoding categprical vars in data
     encoded_features = pd.get_dummies(data, columns = categorical_columns)
     
-    print((encoded_features.columns))
+    # print(encoded_features.columns, flush=True)
     
     # Missing encoded columns from data
     missing_columns = set(train_encoded_columns) - set(encoded_features.columns)
     
-    print(missing_columns)
+    # print(missing_columns, flush=True)
     
     # Encoding missing categorical feats with 0
     for c in missing_columns:
         encoded_features[c] = 0
         
-    print(len(encoded_features.columns))
+    # print(len(encoded_features.columns), flush=True)
         
     # Matching order of variables to those used in training
     encoded_features = encoded_features[train_encoded_columns]
